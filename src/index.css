@@ -1,0 +1,74 @@
+@font-face {
+  font-family: "Popins";
+  src: url("./assets/fonts/Poppins-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+:root {
+  --clr-primary: rgb(0, 26, 110);
+  --clr-primary-accent: rgb(7, 71, 153);
+  --clr-secondary: rgb(0, 153, 144);
+  --clr-secondary-accent: E1FFBB;
+  --clr-tertairy: rgb(255, 69, 69);
+  --clr-neutral-dark: rgb(0, 0, 0);
+  --clr-neutral-light: rgb(255, 255, 255);
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  line-height: 1.5;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: auto;
+}
+
+@media (prefers-reduces-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
