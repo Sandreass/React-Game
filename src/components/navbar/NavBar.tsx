@@ -10,6 +10,11 @@ const NavBar = () => {
         <NavLink to="/">
           <img src={games} alt="game logo" />
         </NavLink>
+        <ul>
+          <li>
+            <NavLink to="/tictictoe">TicTocToe</NavLink>
+          </li>
+        </ul>
       </nav>
     </header>
   );
