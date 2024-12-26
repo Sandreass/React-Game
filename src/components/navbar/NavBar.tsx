@@ -14,6 +14,9 @@ const NavBar = () => {
           <li>
             <NavLink to="/tictictoe">TicTocToe</NavLink>
           </li>
+          <li>
+            <NavLink to="/connectfour">ConnectFour</NavLink>
+          </li>
         </ul>
       </nav>
     </header>

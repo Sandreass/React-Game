@@ -2,6 +2,7 @@ import { RouteObject } from "react-router-dom";
 import HomePage from "../pages/homepage/HomePage";
 import App from "../App";
 import TicTocToePage from "../pages/tictactoe/TicTocToePage";
+import ConnectFourPage from "../pages/connectfour/ConnectFour";
 
 export const routesObj: RouteObject[] = [
   {
@@ -15,6 +16,10 @@ export const routesObj: RouteObject[] = [
       {
         path: "tictictoe",
         element: <TicTocToePage />,
+      },
+      {
+        path: "connectfour",
+        element: <ConnectFourPage />,
       },
     ],
   },
