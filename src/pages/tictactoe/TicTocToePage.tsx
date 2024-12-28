@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
-import "./TicTocToePage.css";
 import circle_icon from "../../assets/circle.png";
 import cross_icon from "../../assets/cross.png";
+import styles from "./TicTocToePage.module.css";
 
 type GameData = string[];
 type Player = "X" | "O";
@@ -37,9 +37,11 @@ const TicTocToePage: React.FC = () => {
     setLock(false);
     setData([...initialData]);
     if (titleRef.current) {
-      titleRef.current.innerHTML = `Tic Tac Toe Game in <span>REACT</span>`;
+      titleRef.current.innerHTML = `<span>Tic Tac Toe</span>`;
     }
-    const boxes = document.querySelectorAll(".boxes");
+  
+      
+    const boxes = document.querySelectorAll(`.${styles.boxes}`);
     boxes.forEach((box) => {
       box.innerHTML = "";
     });
@@ -80,33 +82,33 @@ const TicTocToePage: React.FC = () => {
   };
 
   return (
-    <div className="container">
-      <h1 className="title" ref={titleRef as React.RefObject<HTMLHeadingElement>}>
-        Tic Tac Toe Game in <span>REACT</span>
+    <div className={styles.container}>
+      <h1 className={styles.title} ref={titleRef as React.RefObject<HTMLHeadingElement>}>
+         <span>Tic Tac Toe</span>
       </h1>
       
-      <div className="board">
-        <div className="row1">
-          <div className="boxes" onClick={(e) => toggle(e, 0)}></div>
-          <div className="boxes" onClick={(e) => toggle(e, 1)}></div>
-          <div className="boxes" onClick={(e) => toggle(e, 2)}></div>
+      <div className={styles.board}>
+        <div className={styles.row}>
+          <div className={styles.boxes} onClick={(e) => toggle(e, 0)}></div>
+          <div className={styles.boxes} onClick={(e) => toggle(e, 1)}></div>
+          <div className={styles.boxes} onClick={(e) => toggle(e, 2)}></div>
         </div>
-        <div className="row2">
-          <div className="boxes" onClick={(e) => toggle(e, 3)}></div>
-          <div className="boxes" onClick={(e) => toggle(e, 4)}></div>
-          <div className="boxes" onClick={(e) => toggle(e, 5)}></div>
+        <div className={styles.row}>
+          <div className={styles.boxes} onClick={(e) => toggle(e, 3)}></div>
+          <div className={styles.boxes} onClick={(e) => toggle(e, 4)}></div>
+          <div className={styles.boxes} onClick={(e) => toggle(e, 5)}></div>
         </div>
-        <div className="row3">
-          <div className="boxes" onClick={(e) => toggle(e, 6)}></div>
-          <div className="boxes" onClick={(e) => toggle(e, 7)}></div>
-          <div className="boxes" onClick={(e) => toggle(e, 8)}></div>
+        <div className={styles.row}>
+          <div className={styles.boxes} onClick={(e) => toggle(e, 6)}></div>
+          <div className={styles.boxes} onClick={(e) => toggle(e, 7)}></div>
+          <div className={styles.boxes} onClick={(e) => toggle(e, 8)}></div>
         </div>
       </div>
-      <button className="reset" onClick={resetGame}>
+      <button className={styles.reset} onClick={resetGame}>
         Reset
       </button>
     </div>
   );
 };
 
-export default TicTocToePage;
+export default TicTocToePage; 
