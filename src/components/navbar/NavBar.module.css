@@ -1,0 +1,131 @@
+nav {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navlogo {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  
+  .navlogo a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .navlinks {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navlinks li {
+    position: relative;
+    list-style: none;
+    margin: 0 15px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .navlinks li a {
+    position: relative;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    color: inherit;
+    transition: all 0.3s;
+  }
+  
+  .navlinks li .haschild {
+    cursor: pointer;
+  }
+  
+  .navlinks li .haschild i {
+    margin-left: 5px;
+    padding-top: 2px;
+    font-size: 10px;
+    cursor: pointer;
+  }
+  
+  .navlinks li {
+    position: relative; /* Для подменю */
+    height: 60px; /* Фиксируем высоту */
+  }
+  
+  .navlinks li .subMenu {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #fff;
+    width: 190px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    flex-direction: column;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+  
+  .navlinks li:hover .subMenu {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .navlinks li .subMenu li {
+    padding: 10px 15px; /* Внутренний отступ */
+    white-space: nowrap; /* Предотвращение переноса текста */
+  }
+  
+  .navlinks li .subMenu li a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .navlinks li .subMenu li a:hover {
+    color: #007bff; /* Цвет ссылки при наведении */
+  }
+  
+  .haschild {
+    cursor: pointer;
+  }
+  
+  .hamburger {
+    display: none; /* Скрыть по умолчанию */
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+    z-index: 1;
+  }
+  
+  .hamburger .bar {
+    width: 20px;
+    height: 1px;
+    background-color: #1a1a1a;
+    transition: all 0.3s;
+  }
+  
+  .hamburger.active .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 3px);
+  }
+  
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .hamburger.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -3px);
+  }
+  
