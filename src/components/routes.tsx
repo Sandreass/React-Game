@@ -4,6 +4,7 @@ import App from "../App";
 import TicTocToePage from "../pages/tictactoe/TicTocToePage";
 import ConnectFourPage from "../pages/connectfour/ConnectFour";
 import AboutPage from "../pages/about/AboutPage";
+import ContactPage from "../pages/contact/ContactPage";
 
 export const routesObj: RouteObject[] = [
   {
@@ -25,6 +26,10 @@ export const routesObj: RouteObject[] = [
       {
         path: "about",
         element: <AboutPage />,
+      },
+      {
+        path: "contact",
+        element: <ContactPage />,
       },
     ],
   },
