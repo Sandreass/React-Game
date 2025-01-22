@@ -74,3 +74,15 @@
   background-color: #cccccc;
   cursor: not-allowed;
 }
+
+@media (max-width: 600px) {
+  .board {
+    width: 100%; 
+    gap: 2px; 
+  }
+
+  .cell {
+    padding-bottom: 100%; 
+  }
+}
+
