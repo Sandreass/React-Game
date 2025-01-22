@@ -58,4 +58,18 @@ h1 {
   text-decoration: underline;
 }
 
-
+@media (max-width: 600px) {
+    .contactPage {
+      padding: 10px;
+    }
+  
+    .info p {
+      font-size: 1rem;
+    }
+  
+    .socials li {
+      display: block;
+      margin: 5px 0;
+    }
+  }
+  
